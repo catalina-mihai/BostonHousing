@@ -23,3 +23,11 @@ def calculate(operation, x, y):
         return divide(x, y)
     else:
         return "Error: Invalid operation!"
+
+    def main():
+        operation, x, y = get_user_input()
+        result = calculate(operation, x, y)
+        print(f"The result is: {result}")
+
+    if __name__ == "__main__":
+        main()
