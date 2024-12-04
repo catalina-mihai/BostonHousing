@@ -166,7 +166,7 @@ plt.show()
 #--------- Lasso Regression -------------#
 
 lasso_model = Lasso(alpha=0.1)
-lasso_model.fit(X_train,Y_train)
+lasso_model.fit(X_train_scaled,Y_train)
 y_pred_lasso = lasso_model.predict(X_test_scaled)
 mse_lasso = mean_squared_error(Y_test,y_pred_lasso)
 r2_lasso = r2_score(Y_test,y_pred_lasso)
@@ -187,7 +187,7 @@ plt.show()
 
 #--------------- DecisiontreeRegressor ------------------#
 dec_tree_model = DecisionTreeRegressor(random_state=42)
-dec_tree_model.fit(X_train,Y_train)
+dec_tree_model.fit(X_train_scaled,Y_train)
 y_pred_decTree = dec_tree_model.predict(X_test_scaled)
 mse_decTree = mean_squared_error(Y_test,y_pred_decTree)
 r2_decTree = r2_score(Y_test,y_pred_decTree)
@@ -209,7 +209,7 @@ plt.show()
 #---------- RandomForestRegressor -----------------#
 
 rf_model= RandomForestRegressor(n_estimators=100, random_state=42)
-rf_model.fit(X_train,Y_train)
+rf_model.fit(X_train_scaled,Y_train)
 y_pred_rf = rf_model.predict(X_test_scaled)
 mse_rf = mean_squared_error(Y_test,y_pred_rf)
 r2_rf = r2_score(Y_test,y_pred_rf)
