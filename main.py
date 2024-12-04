@@ -7,8 +7,8 @@ from sklearn.linear_model import LinearRegression , Ridge, Lasso
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error, r2_score
-
 from sklearn.preprocessing import StandardScaler
+
 df=pd.read_csv('BostonHousing.csv')
 df.head()
 df.describe()
